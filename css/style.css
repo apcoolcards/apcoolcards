@@ -269,7 +269,42 @@ footer a {
   display: none;
 }
 
-/* ---------- 11. Phone adjustments ----------
+/* ---------- 11. Listings page ---------- */
+/* Listings have no photo, so give the info a bit more room
+   and push the buttons to the bottom of every card. */
+.listings .card {
+  display: flex;             /* lets the info box stretch to the card's full height */
+}
+
+.listings .card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                   /* fill the whole card */
+}
+
+.listings .card-info h3 {
+  font-size: 1rem;
+}
+
+/* Big red price */
+.price {
+  font-size: 1.4rem !important;
+  font-weight: bold;
+  color: var(--red);
+  margin-top: auto !important;  /* "auto" pushes price + buttons to the bottom */
+  padding-top: 10px;
+}
+
+/* Smaller version of the round buttons, stacked full width */
+.button.small {
+  display: block;
+  text-align: center;
+  padding: 8px 12px;
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- 12. Phone adjustments ----------
    Rules inside here only apply on screens 600px wide or smaller. */
 @media (max-width: 600px) {
   .nav-container {
