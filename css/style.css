@@ -226,7 +226,50 @@ footer a {
   margin: 0 10px;
 }
 
-/* ---------- 10. Phone adjustments ----------
+/* ---------- 10. Contact form ---------- */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form label {
+  display: block;            /* puts each label on its own line */
+  font-weight: bold;
+  margin-top: 15px;
+  color: var(--dark-blue);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  font-family: inherit;      /* use the same font as the rest of the page */
+  font-size: 1rem;
+}
+
+/* Yellow outline on the box you're typing in */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+}
+
+/* <button> has its own default look, so remove the border to match .button */
+.contact-form button {
+  border: none;
+  cursor: pointer;           /* shows the hand pointer */
+  font-size: 1rem;
+  margin: 20px 0 0;
+}
+
+/* Hides the robot trap box from people */
+.hidden-trap {
+  display: none;
+}
+
+/* ---------- 11. Phone adjustments ----------
    Rules inside here only apply on screens 600px wide or smaller. */
 @media (max-width: 600px) {
   .nav-container {

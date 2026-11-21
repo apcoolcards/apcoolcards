@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- ======================================================
+     CONTACT PAGE (contact.html)
+     A form people fill in to ask about a card.
+     A website made of plain HTML can't send email by itself,
+     so the form hands the message to Formspree (a free
+     service), and Formspree emails it to Dad.
+     ====================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | AP Cool Cards</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="AP Cool Cards logo">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="collection.html">Collection</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <h1>Contact</h1>
+
+    <section class="box">
+      <p>Want to buy, sell or trade? Send a message and we'll get back to you.</p>
+
+      <!-- <form> collects what people type.
+           action = where the message is sent when they press Send.
+           The code at the end (mvkawoav) is our form on formspree.io. -->
+      <form class="contact-form" action="https://formspree.io/f/mvkawoav" method="POST">
+
+        <!-- Each <label> is the text above a box. Its "for" matches the box's "id",
+             so clicking the label jumps into the box. -->
+        <label for="name">Your name</label>
+        <!-- "required" means the form won't send until this is filled in -->
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your email</label>
+        <!-- type="email" makes the browser check it looks like an email address -->
+        <input type="email" id="email" name="email" required>
+
+        <label for="card">Which card? (optional)</label>
+        <input type="text" id="card" name="card" placeholder="e.g. Misty's Favor PSA 10">
+
+        <label for="message">Message</label>
+        <!-- <textarea> is a bigger box for longer text -->
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <!-- Hidden extras for Formspree:
+             _subject sets the email's subject line.
+             _gotcha is a trap for spam robots: people never see it,
+             so if it's filled in, Formspree knows it's a robot. -->
+        <input type="hidden" name="_subject" value="New message from apcoolcards.com">
+        <input type="text" name="_gotcha" class="hidden-trap" tabindex="-1" autocomplete="off">
+
+        <!-- Uses the same red button style as the rest of the site -->
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 AP Cool Cards &bull; Based in Massachusetts</p>
+    <p>
+      <a href="https://www.instagram.com/apcoolcards/" target="_blank">Instagram</a>
+      <a href="https://www.ebay.com/usr/ridavid81" target="_blank">eBay</a>
+    </p>
+  </footer>
+
+</body>
+</html>
