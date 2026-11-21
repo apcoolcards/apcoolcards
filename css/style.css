@@ -305,7 +305,13 @@ footer a {
   font-size: 0.9rem;
 }
 
-/* ---------- 12. Phone adjustments ----------
+/* ---------- 12. Coming soon box ---------- */
+.coming-soon {
+  text-align: center;        /* centers the text and the button */
+  border-top-color: var(--yellow);
+}
+
+/* ---------- 13. Phone adjustments ----------
    Rules inside here only apply on screens 600px wide or smaller. */
 @media (max-width: 600px) {
   .nav-container {
