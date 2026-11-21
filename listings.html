@@ -39,7 +39,9 @@
     <!-- Big button to the full eBay page, in case this list is out of date -->
     <a href="https://www.ebay.com/usr/ridavid81" class="button" target="_blank">See all my eBay listings</a>
 
-    <!-- Same grid as the Collection page. Each <div class="card"> is one listing. -->
+    <!-- Same grid as the Collection page. Each <div class="card"> is one listing.
+         A card shows a photo when images/ has a file named after its eBay item number
+         (loading="lazy" means far-down photos only load when you scroll to them). -->
     <div class="card-grid listings">
 
       <div class="card">
@@ -52,6 +54,9 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-photo">
+          <img src="images/900083461267.jpg" alt="Xerneas GX (Secret) 139/131 Sm-Forbidden Light Holo" loading="lazy">
+        </div>
         <div class="card-info">
           <h3>Xerneas GX (Secret) 139/131 Sm-Forbidden Light Holo</h3>
           <p><strong>Condition:</strong> PSA 10</p>

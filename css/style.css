@@ -274,6 +274,7 @@ footer a {
    and push the buttons to the bottom of every card. */
 .listings .card {
   display: flex;             /* lets the info box stretch to the card's full height */
+  flex-direction: column;    /* photo on top, info underneath */
 }
 
 .listings .card-info {
